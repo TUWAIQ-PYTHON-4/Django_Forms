@@ -1,0 +1,22 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" style="justify-content: center;
+  text-align: center;
+  min-height: 100vh;">
+{% csrf_token %}
+{{form.as_p}}
+<button type ="submit">
+    Click here!
+</button>
+
+</div>
+
+</body>
+</html>
+{% endblock %}
