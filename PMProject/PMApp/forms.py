@@ -13,7 +13,7 @@ MOVIE_CHOICES = (
 )
 
 
-class ExampleForm(forms.Form):
+"""class ExampleForm(forms.Form):
     text_input = forms.CharField()
     password_input = forms.CharField(widget=forms.PasswordInput)
     checkbox_on = forms.BooleanField()
@@ -26,10 +26,10 @@ class ExampleForm(forms.Form):
     decimal_input = forms.DecimalField(max_digits=3)
     email_input = forms.EmailField()
     date_input = forms.DateField(widget=forms.DateInput(attrs={"type": "date"}))
-    hidden_input = forms.CharField(widget=forms.HiddenInput, initial="Hidden Value")
+    hidden_input = forms.CharField(widget=forms.HiddenInput, initial="Hidden Value")"""
 
 
-class ProjectForm(forms.ModelForm):
+class ExampleForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = "__all__"
