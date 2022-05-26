@@ -1,0 +1,20 @@
+{% extends 'project.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Tasks</title>
+  </head>
+  <body>
+
+
+{% block content %}
+ {% for k in task %}
+    <li>Task title: {{ k.title }}</li>
+    <li>Description: {{ k.description }}</li>
+    <li>Time Estimate: {{ k.time_estimate }}</li>
+    <li>Completed: {{ k.completed }}</li>
+    {% endfor %}
+{% endblock %}
+  </body>
+</html>
