@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<form method="post">
+   {% csrf_token %}
+   {{ form.as_p }}
+<p>
+<input type="submit" name="submit_input" value="Submit Input">
+</p>
+</form>
+{% for item in taskList %}
+<ul>
+ Task : {{item.task.title}}
+    <li>
+        <span>{{ item.task.description }}</span>
+    </li>
+    <li>
+        <span>{{ item.task.time_estimate }} </span>
+    </li>
+</ul>
+{%endfor%}
+</body>
+</html>
