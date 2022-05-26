@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container">
+<form class="row g-3" method="post">
+{% csrf_token %}
+{{ form.as_p }} >
+  <div class="col-12">
+    <button type="submit" name="button_element"class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+  </div>
+{% endblock %}
